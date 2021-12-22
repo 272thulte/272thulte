@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>193014259 黄翠</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+		.box {border:1px #ccc solid; width:500px; height:500px;}
+		.box div { float:left;}
+		.box .left {border:1px #000 solid;width:100px; height:200px;}
+		.box .center {border:1px #000 solid;width:100px; height:200px;}
+		.box .right {border:1px #000 solid;width:100px; height:200px;}
+		</style>
+	</head>
+	<body background="img/joyce.jpg">
+		<div id="app">
+			<!--实现(十进制、十六进制、八进制)转二进制-->
+			<h2>十进制、十六进制、八进制转二进制</h2>
+			<p1>1、十进制转二进制:</p1>
+			<input type="text" name="" id="" value="" v-model="number1"/>
+			结果：{{result1}}<br />
+			<p2>2、十六进制转二进制</p2>
+			<input type="text" name="" id="" value="" v-model="number2"/>
+			结果：{{result2}}<br />
+			<p3>3、八进制转二进制</p3>
+			<input type="text" name="" id="" value="" v-model="number3"/>
+			结果：{{result3}}<br />
+			<!--实现(二进制、十六进制、八进制)转十进制-->
+			<h2>二进制、十六进制、八进制转十进制</h2>
+			<p4>二进制转十进制</p4>
+			<input type="text" name="" id="" value="" v-model="number4"/>
+			结果：{{result4}}<br />
+			<p5>十六进制转十进制</p5>
+			<input type="text" name="" id="" value="" v-model="number5"/>
+			结果：{{result5}}<br />
+			<p6>八进制转十进制</p6>
+			<input type="text" name="" id="" value="" v-model="number6"/>
+			结果：{{result6}}<br />
+			<!--实现(十进制、二进制、八进制)转十六进制-->
+			<h2>十进制、二进制、八进制转十六进制</h2>
+			<p7>十进制转十六进制</p7>
+			<input type="text" name="" id="" value="" v-model="number7"/>
+			结果：{{result7}}<br />
+			<p8>二进制转十六进制</p8>
+			<input type="text" name="" id="" value="" v-model="number8"/>
+			结果：{{result8}}<br />
+			<p9>八进制转十六进制</p9>
+			<input type="text" name="" id="" value="" v-model="number9"/>
+			结果：{{result9}}<br />
+			<!--实现(十进制、十六进制、二进制)转八进制-->
+			<h2>十进制、十六进制、二进制转八进制</h2>
+			<p10>十进制转八进制</p10>
+			<input type="text" name="" id="" value="" v-model="number10"/>
+			结果：{{result10}}<br />
+			<p11>十六进制转八进制</p11>
+			<input type="text" name="" id="" value="" v-model="number11"/>
+			结果：{{result11}}<br />
+			<p12>二进制转八进制</p12>
+			<input type="text" name="" id="" value="" v-model="number12"/>
+			结果：{{result12}}<br />
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					number1:'0',
+					number2:'0',
+					number3:'0',
+					number4:'0',
+					number5:'0',
+					number6:'0',
+					number7:'0',
+					number8:'0',
+					number9:'0',
+					number10:'0',
+					number11:'0',
+					number12:'0',
+				},
+				<!--实现(十进制、十六进制、八进制)转二进制-->
+				computed: {
+				result1: function() {
+					return (parseInt(this.number1)).toString(2);
+				},
+				result2: function() {
+					return (parseInt(this.number2, 16)).toString(2);
+				},
+				result3: function() {
+					return (parseInt(this.number3, 8)).toString(2);
+				},
+				<!--实现(二进制、十六进制、八进制)转十进制-->
+				result4: function() {
+					return parseInt(this.number4, 2);
+				},
+				result5: function() {
+					return parseInt(this.number5, 16);
+				},
+				result6: function() {
+					return parseInt(this.number6, 8);
+				},
+				<!--实现(十进制、二进制、八进制)转十六进制-->
+				result7: function() {
+					return (parseInt(this.number7)).toString(16);
+				},
+				result8: function() {
+					return (parseInt(this.number8, 2)).toString(16);
+				},
+				result9: function() {
+					return (parseInt(this.number9, 8)).toString(16);
+				},
+				<!--实现(十进制、十六进制、二进制)转八进制-->
+				result10: function() {
+					return (parseInt(this.number10)).toString(8);
+				},
+				result11: function() {
+					return (parseInt(this.number11, 16)).toString(8);
+				},
+				result12: function() {
+					return (parseInt(this.number12, 2)).toString(8);
+				},
+
+
+
+
+				}
+			});
+		</script>
+	</body>
+</html>
